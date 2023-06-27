@@ -1,14 +1,15 @@
 import React from "react";
+import 'normalize.css';
+
 import { Navbar ,Herosection} from "./componets";
 
 function App() {
   return (
     
-    <>
-    <Navbar />
-    <Herosection />
-    </>
-    
+    <div>
+   <Navbar style={{backgroundColor:'#001E3C'}} />
+   <Herosection/>
+  </div>
    
   );
 }
