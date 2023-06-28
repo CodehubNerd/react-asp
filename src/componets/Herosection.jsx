@@ -20,10 +20,10 @@ const Herosection = () => {
          
           <Box >
 
-      <Stack spacing={2}>
-      <Typography  variant='h5' color={'black'}>CREATE + READ + UPDATE + DELETE</Typography>
-          <Typography  variant='p' color={'black'}>Create your First Post</Typography>
-          <Box><button variant="contained">Create Post</button></Box>
+      <Stack spacing={2} style={{padding:'100px'}}>
+      <Typography color={'white'} variant='h5' fontSize={'50px'}fontFamily={'Inter'} fontWeight={700}>CREATE + READ + UPDATE + DELETE</Typography>
+          <Typography fontFamily={'Inter'} color={'white'}  variant='p' >Create your First Post</Typography>
+          <Box><Button fontFamily={'Inter'} fontWeight={700} variant="contained">Create Post</Button></Box>
       </Stack>
     </Box>
    </Box>

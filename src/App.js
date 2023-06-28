@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 function App() {
   return (
     
-<Box>
+<Box sx={{backgroundColor:'#001E3C',height:'100vh'}}>
 <Navbar/> 
 <Herosection/> 
 </Box>

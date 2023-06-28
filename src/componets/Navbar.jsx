@@ -5,12 +5,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 
+
 const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: '#001E3C'}}>
       <Toolbar>
-     <Typography variant='h6'>CRUDE</Typography>
+     <Typography paddingLeft={'60px'}  fontFamily={'Inter'} fontWeight={700} variant='h6'>CRUDE</Typography>
      </Toolbar>
     </AppBar>
   </Box>
