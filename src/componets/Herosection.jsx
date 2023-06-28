@@ -13,10 +13,12 @@ const Herosection = () => {
 
   return (
     <>
-     <Container maxWidth="md">
-        <Box height={'400px'}  sx={{ backgroundImage: 'url(../bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', }}>
+     <Container maxWidth="lg" >
+        <Box  mt ={'50px'}  height={'400px'}  sx={{ backgroundImage: 'url(../bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius:'8px'}}>
           
-          <Typography color={'black'}>CREATE + READ + UPDATE + DELETE</Typography>
+          <Typography  variant='h5' color={'black'}>CREATE + READ + UPDATE + DELETE</Typography>
+          <Typography  variant='p' color={'black'}>Create your First Post</Typography>
+          <button variant="contained">Contained</button>
    </Box>
       </Container>
     </>
