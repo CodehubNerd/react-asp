@@ -11,7 +11,7 @@ const Navbar = () => {
     <Box sx={{ flexGrow: 1 }}>
     <AppBar position="static" style={{ backgroundColor: '#001E3C'}}>
       <Toolbar>
-     <Typography paddingLeft={'60px'}  fontFamily={'Inter'} fontWeight={700} variant='h6'>CRUDE</Typography>
+     <Typography paddingLeft={'60px'}  fontFamily={'Inter'} fontWeight={700} variant='h6'>CRUD</Typography>
      </Toolbar>
     </AppBar>
   </Box>
