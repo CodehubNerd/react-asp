@@ -1,7 +1,7 @@
 import React from "react";
 import 'normalize.css';
 
-import { Navbar ,Herosection} from "./componets";
+import { Navbar ,Herosection,Posts} from "./componets";
 import { Box } from "@mui/material";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
 <Box sx={{backgroundColor:'#001E3C',height:'100vh'}}>
 <Navbar/> 
 <Herosection/> 
+<Posts/> 
 </Box>
    
   );

@@ -26,7 +26,12 @@ const Herosection = () => {
           <Box><Button fontFamily={'Inter'} fontWeight={700} variant="contained">Create Post</Button></Box>
       </Stack>
     </Box>
-   </Box>
+        </Box>
+        
+        <Box mt={'50px'}>
+          <Box><Typography fontFamily={'Inter'} color={'white'} >Post Created</Typography></Box>
+          
+          </Box>
       </Container>
     </>
    
