@@ -12,15 +12,16 @@ const Herosection = () => {
 })
 
   return (
-    <React.Fragment>
-    <CssBaseline />
-    <Container maxWidth="sm">
+    <>
+     <Container maxWidth="md">
         <Box height={'400px'}  sx={{ backgroundImage: 'url(../bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', }}>
           
           <Typography color={'black'}>CREATE + READ + UPDATE + DELETE</Typography>
    </Box>
-    </Container>
-  </React.Fragment>
+      </Container>
+    </>
+   
+
   );
 };
 
