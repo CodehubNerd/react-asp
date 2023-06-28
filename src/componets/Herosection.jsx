@@ -1,28 +1,26 @@
-import React from 'react';
-import { Button, Typography } from '@mui/material';
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import styled from '@emotion/styled';
+import { Typography } from '@mui/material';
 
 const Herosection = () => {
+
+  const Herocontainer = styled(Box)({
+  
+})
+
   return (
-    <div
-      style={{
-        backgroundImage: "url('https://img.freepik.com/free-photo/beautiful-brunette-woman-staying-her-workplace_273609-36911.jpg?w=740&t=st=1687866926~exp=1687867526~hmac=be79a3136742c7ad1a0cf8875e2bd64b5a036d14fb74cf98dd823e0d0a70f921')", // Replace with the path to your background image
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: '#fff', // Color for the text
-      }}
-    >
-      <Container fixed>
-        <Typography variant="h3">masiko</Typography>
-        <Button variant="contained" color="primary">
-          Get Started
-        </Button>
-      </Container>
-    </div>
+    <React.Fragment>
+    <CssBaseline />
+    <Container maxWidth="sm">
+        <Box height={'400px'}  sx={{ backgroundImage: 'url(../bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', }}>
+          
+          <Typography color={'black'}>CREATE + READ + UPDATE + DELETE</Typography>
+   </Box>
+    </Container>
+  </React.Fragment>
   );
 };
 
