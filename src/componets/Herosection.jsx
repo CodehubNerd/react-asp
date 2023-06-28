@@ -23,7 +23,7 @@ const Herosection = () => {
       <Stack spacing={2}>
       <Typography  variant='h5' color={'black'}>CREATE + READ + UPDATE + DELETE</Typography>
           <Typography  variant='p' color={'black'}>Create your First Post</Typography>
-          <button variant="contained">Contained</button>
+          <Box><button variant="contained">Create Post</button></Box>
       </Stack>
     </Box>
    </Box>
