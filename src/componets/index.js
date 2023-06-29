@@ -1,4 +1,5 @@
 import Navbar from "./Navbar"; 
 import Herosection from "./Herosection"; 
 import Posts from "./Posts"; 
-export { Navbar,Herosection,Posts};
+import Floatbtn from "./Floatbtn"; 
+export { Navbar,Herosection,Posts,Floatbtn};

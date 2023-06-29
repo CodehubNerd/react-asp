@@ -7,6 +7,7 @@ import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 
 import { Avatar, Typography } from '@mui/material';
+import { Floatbtn } from '../componets';
 
 import Card from '@mui/material/Card';
 import Modal from '@mui/material/Modal';
@@ -139,7 +140,7 @@ const Herosection = () => {
           {alert && <Alert severity="success">Post Created Successfully!</Alert>}
           </Stack>
           
-          <Box mt={5} gap={3} style={{ display: 'flex' }}>
+          <Box mt={5} gap={3} sx={{display:{xs:""}}} style={{ display: 'flex' }}>
             
           <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -229,7 +230,8 @@ const Herosection = () => {
 
           </Box>
           
-          </Box>
+        </Box>
+        <Floatbtn />
       </Container>
     </>
    
