@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, { useRef,useState } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import EditIcon from '@mui/icons-material/Edit';
-
+import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 
 import { Avatar, Typography } from '@mui/material';
@@ -34,6 +34,8 @@ const style = {
 const Herosection = () => {
 
   const [open, setOpen] = React.useState(false);
+  const [alert, setAlert] = useState(false)
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const fileInputRef = useRef(null);
@@ -45,9 +47,27 @@ const Herosection = () => {
     console.log(file);
   };
 
+  const handlePostSubmit = () => {
+    // Logic for submitting the post
+
+    // Display the Alert component
+    setAlert(true);
+    setOpen(false);
+
+   
+
+    // Reset the Alert after a certain duration
+    setTimeout(() => {
+      setAlert(false);
+    }, 3000); // Adjust the duration as needed
+  };
+
   return (
     <>
-     <Container maxWidth="lg" >
+      <Container maxWidth="lg" >
+
+        
+
         <Box  mt ={'50px'}  height={'400px'}  sx={{ backgroundImage: 'url(../bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius:'8px'}}>
           
          
@@ -96,8 +116,9 @@ const Herosection = () => {
                    
     >
       <TextField id="outlined-basic" label="Your name" variant="outlined" />
-      <TextField id="outlined-basic" label="Upload image" variant="outlined" />
      
+      <TextField required   id="outlined-required" type='file' />
+      <Button variant="contained" onClick={handlePostSubmit}>POST</Button>
     </Box>
       </Stack>
     </Box>
@@ -114,6 +135,13 @@ const Herosection = () => {
         
         <Box mt={'50px'} pb={30}>
           <Box><Typography fontFamily={'Inter'} color={'white'} >Posts Created</Typography></Box>
+          
+          <Stack sx={{ width: '100%' }} spacing={2}>
+        
+       
+          {alert && <Alert severity="success">Post Created Successfully!</Alert>}
+          </Stack>
+          
           <Box mt={5} gap={3} style={{ display: 'flex' }}>
             
           <Card sx={{ maxWidth: 345 }}>
