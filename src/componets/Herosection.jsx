@@ -1,4 +1,4 @@
-import  React,{useState} from 'react';
+import * as React from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -9,16 +9,41 @@ import Stack from '@mui/material/Stack';
 import { Avatar, Typography } from '@mui/material';
 
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
+import Modal from '@mui/material/Modal';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
+import TextField from '@mui/material/TextField';
+
+
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  borderRadius:2,
+  boxShadow: 24,
+  p: 4,
+};
 
 const Herosection = () => {
 
-const [first, setfirst] = useState('second')
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const fileInputRef = useRef(null);
+
+
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    // Process the uploaded file here
+    console.log(file);
+  };
 
   return (
     <>
@@ -35,6 +60,57 @@ const [first, setfirst] = useState('second')
       </Stack>
     </Box>
         </Box>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+  
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" fontFamily={'Inter'} fontWeight={700} fontSize={'14px'} variant="h5" component="h2">
+           CREATE POST
+          </Typography>
+          <Box sx={{ width: '100%' }}>
+      <Stack spacing={2}>
+      <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '100%' },
+      }}
+      noValidate
+                    autoComplete="off"
+                   
+    >
+      <TextField id="outlined-basic" label="Your name" variant="outlined" />
+      <TextField id="outlined-basic" label="Upload image" variant="outlined" />
+     
+    </Box>
+      </Stack>
+    </Box>
+        </Box>
+      </Modal>
+    </div>
+
+
+
+
+
+
+
         
         <Box mt={'50px'} pb={30}>
           <Box><Typography fontFamily={'Inter'} color={'white'} >Posts Created</Typography></Box>
@@ -65,7 +141,7 @@ const [first, setfirst] = useState('second')
 
                   <box>
                   <Tooltip title="Edit">
-                  <IconButton sx={{ color: '#0467FC' }}>
+                  <IconButton sx={{ color: '#0467FC' }}  onClick={handleOpen}>
                  <EditIcon />
                   </IconButton>
                     </Tooltip>
