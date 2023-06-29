@@ -1,16 +1,24 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import styled from '@emotion/styled';
+import EditIcon from '@mui/icons-material/Edit';
+
 import Stack from '@mui/material/Stack';
-import { Typography } from '@mui/material';
+
+import { Avatar, Typography } from '@mui/material';
+
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
 const Herosection = () => {
 
-  const Herocontainer = styled(Box)({
-  
-})
+const [first, setfirst] = useState('second')
 
   return (
     <>
@@ -28,8 +36,97 @@ const Herosection = () => {
     </Box>
         </Box>
         
-        <Box mt={'50px'}>
-          <Box><Typography fontFamily={'Inter'} color={'white'} >Post Created</Typography></Box>
+        <Box mt={'50px'} pb={30}>
+          <Box><Typography fontFamily={'Inter'} color={'white'} >Posts Created</Typography></Box>
+          <Box mt={5} gap={3} style={{ display: 'flex' }}>
+            
+          <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 250 }}
+        image="https://img.freepik.com/free-photo/african-american-woman-checking-social-media-phone_53876-105397.jpg?size=626&ext=jpg&ga=GA1.1.1087366336.1687774892&semt=ais"
+        title="green iguana"
+      />
+              <CardContent>
+                <Box sx={{ display: 'flex'}}>
+
+                <Stack direction="row" sx={{alignItems:'center'}} spacing={1}> 
+                <Avatar sx={{ bgcolor:'#0467FC'}}>M</Avatar>
+                    <Typography gutterBottom variant="p" fontFamily={'Inter'} fontSize={14} fontWeight={500}>By {'Masiko'}</Typography>
+                </Stack>
+                
+                <Stack direction="row" spacing={1}> 
+                  <box>
+                  <Tooltip title="Delete">
+                      <IconButton sx={{ color: '#0467FC' }}>
+                 <DeleteIcon />
+                  </IconButton>
+                    </Tooltip>
+                  </box>
+
+                  <box>
+                  <Tooltip title="Edit">
+                  <IconButton sx={{ color: '#0467FC' }}>
+                 <EditIcon />
+                  </IconButton>
+                    </Tooltip>
+                  </box>
+          
+               
+            </Stack>
+                </Box>
+               
+                
+     
+      </CardContent>
+    
+    </Card>
+
+
+
+
+          <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 250 }}
+        image="https://img.freepik.com/free-photo/african-american-woman-checking-social-media-phone_53876-105397.jpg?size=626&ext=jpg&ga=GA1.1.1087366336.1687774892&semt=ais"
+        title="green iguana"
+      />
+              <CardContent>
+                <Box sx={{ display: 'flex'}}>
+
+                <Stack direction="row" sx={{alignItems:'center'}} spacing={1}> 
+                <Avatar sx={{ bgcolor:'#0467FC'}}>M</Avatar>
+                    <Typography gutterBottom variant="p" fontFamily={'Inter'} fontSize={14} fontWeight={500}>By {'Masiko'}</Typography>
+                </Stack>
+                
+                <Stack direction="row" spacing={1}> 
+                  <box>
+                  <Tooltip title="Delete">
+                      <IconButton sx={{ color: '#0467FC' }}>
+                 <DeleteIcon />
+                  </IconButton>
+                    </Tooltip>
+                  </box>
+
+                  <box>
+                  <Tooltip title="Edit">
+                  <IconButton sx={{ color: '#0467FC' }}>
+                 <EditIcon />
+                  </IconButton>
+                    </Tooltip>
+                  </box>
+          
+               
+            </Stack>
+                </Box>
+               
+                
+     
+      </CardContent>
+    
+    </Card>
+     
+
+          </Box>
           
           </Box>
       </Container>
