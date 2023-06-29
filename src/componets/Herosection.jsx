@@ -68,18 +68,15 @@ const Herosection = () => {
 
         
 
-        <Box  mt ={'50px'}  height={'400px'}  sx={{ backgroundImage: 'url(../bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius:'8px'}}>
-          
-         
-          <Box >
-
+    <Box  mt ={'50px'}  height={'400px'}  sx={{ backgroundImage: 'url(../bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius:'8px'}}>  
+    <Box >
       <Stack spacing={2} style={{padding:'100px'}}>
-      <Typography color={'white'} variant='h5' fontSize={'50px'}fontFamily={'Inter'} fontWeight={700}>CREATE + READ + UPDATE + DELETE</Typography>
-          <Typography fontFamily={'Inter'} color={'white'}  variant='p' >Create your First Post</Typography>
-          <Box><Button fontFamily={'Inter'} fontWeight={700} variant="contained">Create Post</Button></Box>
+      <Typography  color={'white'} variant='h5' fontSize={'20px'}fontFamily={'Inter'} fontWeight={700}>CREATE + READ + UPDATE + DELETE</Typography>
+          <Typography fontFamily={'Inter'} color={'white'} fontSize={'12px'} variant='p' >CREATE YOUR FIRST  POST</Typography>
+          <Box><Button sx={{display:{xs:"none",sm:"block"}}} fontFamily={'Inter'} fontWeight={700} variant="contained">Create Post</Button></Box>
       </Stack>
     </Box>
-        </Box>
+  </Box>
 
 
 
