@@ -140,8 +140,20 @@ const Herosection = () => {
           {alert && <Alert severity="success">Post Created Successfully!</Alert>}
           </Stack>
           
-          <Box mt={5} gap={3} sx={{display:{xs:""}}} style={{ display: 'flex' }}>
-            
+          <Box
+        mt={5}
+        gap={3}
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+        }}
+        sx={{
+          '@media (max-width:600px)': {
+            flexDirection: 'column',
+          },
+        }}
+      >
           <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 250 }}
